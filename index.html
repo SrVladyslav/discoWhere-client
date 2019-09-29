@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vladyslav Mazurkevych</title>
+	<!--/////////PAGE DESIGN///////////////-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta content="Profile of Vladyslav Mazurkevych">
+	<!--Fav-->
+  	<link href="img/vlad.png" rel="shortcut icon">
+	<!--/////////PAGE DESIGN END///////////-->
+
+	<!--//////////////FONTS////////////////-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Exo|Patua+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet"> 
+	<!--Christmas font-->
+	<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+	<!--///////////FONTS END///////////////-->
+	<!--///////////SCRIPTS/////////////////-->
+	<!--Bootstrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!--/////////// END of SCRIPTS/////////////////-->
+	<!--animation-->
+   	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+	<nav class="sticky" id="navBar">
+		<ul class="nav-links">
+			<li><a href="#home" >Principal</a></li>
+			<li><a href="#me" >DiscoWHERE?</a></li>
+			<li><a href="#register" id="register_button">Registrarme</a></li>
+			<li>
+				<a href="index-en.html#home">
+					<img src="img/flags/GB_flag.png" style="height: 30px; width: 30px; margin-top: -5px;">
+				</a>
+			</li>		
+			<li></li>
+		</ul>
+		<div class="burger">
+			<div class="lin1"></div>
+			<div class="lin2"></div>
+			<div class="lin3"></div>
+		</div>
+	</nav>
+	<div class="container-fluid" id="home">
+		<button type="button" class="button_start">Buscar fiesta!</button>
+	</div>
+	<div class="container-fluid" id="me">
+		<br><br><br>
+		<div class="row">
+			<div class="col-md-7 col-sm-12">
+				<b class="title-left title" data-aos="fade-right">Qué es discoWHERE?</b>
+				<div class="description">
+					<p>
+						Hello
+					</p>
+				</div>
+			</div>
+			<div class="col-md-5 col-sm-12">
+				<img src="img/photos/cac.jpg" class="img_description" data-aos="fade-down" alt="">
+			</div>
+		</div>
+		<br><br><br><br><br><br><br>
+	</div>
+	<footer>
+    <div class="container-fluid footer-bottom footer-font">
+			Juntos conseguiremos unas mejores fiestas!!!
+	</div>
+	</footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script type="text/javascript" charset="utf-8">
+	  //DETECTS THE POSITION ON THE SCREEN
+		$(document).ready(function() {
+			if($(document).scrollTop() <= 5) {
+				$('#navBar').addClass('header_color');
+				$('#navBar').removeClass('barra');
+				$('#nav-links').addClass('barOnTop');
+			}
+			else {
+				$('#navBar').addClass('barra');
+				$('#navBar').removeClass('header_color');
+				$('#nav-links').removeClass('barOnTop');
+			}
+		});
+		$(window).scroll(function() {
+			if($(document).scrollTop() <= 5) {
+				$('#navBar').addClass('header_color');
+				$('#navBar').removeClass('barra');
+				$('#nav-links').addClass('barOnTop');
+			}
+			else {
+				$('#navBar').addClass('barra');
+				$('#navBar').removeClass('header_color');
+				$('#nav-links').removeClass('barOnTop');
+			}
+		});
+	</script>
+	<script src="js/barAnimation.js"></script>
+	<script>
+	  AOS.init();
+	</script>
+</body>
+</html>
