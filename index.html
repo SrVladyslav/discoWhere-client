@@ -67,6 +67,40 @@
 		</div>
 		<br><br><br><br><br><br><br>
 	</div>
+	<hr>
+	<div class="container-fluid" id="myList" style="background-color: white; margin: 50px auto;">
+	  <textarea name="textarea" rows="2" cols="50" id="textA">Write something here</textarea>
+	  <center><button onclick="myFunction()" style="background-color: #EFEFEF; color: #A70B0B; height:2em; width:7em; border-radius: 80px; border-width: 2px; border-color: #EFEFEF;">Try it</button></center>
+	  <div>
+	  	<center>POSTS</center>
+	  </div>
+	</div>
+	<hr>
+
+	<script>
+		postID = 0
+		function myFunction() {
+		  var post = document.createElement("DIV");
+		  var node = document.createElement("DIV");
+		  var textBody = document.createElement("DIV");
+		  node.setAttribute("style", "background-color:#E2E2E2; border: 1px solid #F7F7F7; margin:5em; margin-bottom:0em !important;");
+		  textBody.setAttribute("style", "background-color:#F2F2F2; border: 1px solid #F7F7F7; margin:5em;margin-top:0em !important;");
+		  node.setAttribute("id", postID++)
+		  var textnode = document.createTextNode("POST nº"+postID + ": \n");
+		  var textBod = document.createTextNode(document.getElementById("textA").value);
+		  node.appendChild(textnode);
+		  textBody.appendChild(textBod);
+		  post.appendChild(node)
+		  post.appendChild(textBody)
+		  document.getElementById("myList").appendChild(post);
+		}
+	</script>
+
+
+
+
+
+
 	<footer>
     <div class="container-fluid footer-bottom footer-font">
 			Juntos conseguiremos unas mejores fiestas!!!
