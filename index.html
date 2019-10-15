@@ -69,30 +69,49 @@
 	</div>
 	<hr>
 	<div class="container-fluid" id="myList" style="background-color: white; margin: 50px auto;">
-	  <textarea name="textarea" rows="2" cols="50" id="textA">Write something here</textarea>
-	  <center><button onclick="myFunction()" style="background-color: #EFEFEF; color: #A70B0B; height:2em; width:7em; border-radius: 80px; border-width: 2px; border-color: #EFEFEF;">Try it</button></center>
+	  
+	  <center><input type="text" class="input-res" id="textA" style="-webkit-appearance: none;
+		  -moz-appearance: none;
+		  appearance: none;
+		  font: 15px/1 'Open Sans', sans-serif;
+		  color: #333;
+		  -webkit-font-smoothing: antialiased;
+		  -moz-osx-font-smoothing: grayscale;
+		  width: 100%;
+		  max-width: 500px;
+		  background-color: #ddd;
+		  border: none;
+		  padding: 10px 11px 11px 11px;
+		  border-radius: 3px;
+		  box-shadow: none;
+		  outline: none;
+		  margin: 0;
+		  box-sizing: border-box;"><br><button onclick="myFunction()" style="background-color: #EFEFEF; color: #A70B0B; height:2em; width:7em; border-radius: 80px; border-width: 2px; border-color: #EFEFEF;">Publish</button></center>
 	  <div>
-	  	<center>POSTS</center>
+	  	<center><h1><b>POSTS</b></h1></center>
 	  </div>
+	  <hr>
 	</div>
 	<hr>
 
 	<script>
 		postID = 0
 		function myFunction() {
-		  var post = document.createElement("DIV");
-		  var node = document.createElement("DIV");
-		  var textBody = document.createElement("DIV");
-		  node.setAttribute("style", "background-color:#E2E2E2; border: 1px solid #F7F7F7; margin:5em; margin-bottom:0em !important;");
-		  textBody.setAttribute("style", "background-color:#F2F2F2; border: 1px solid #F7F7F7; margin:5em;margin-top:0em !important;");
-		  node.setAttribute("id", postID++)
-		  var textnode = document.createTextNode("POST nº"+postID + ": \n");
-		  var textBod = document.createTextNode(document.getElementById("textA").value);
-		  node.appendChild(textnode);
-		  textBody.appendChild(textBod);
-		  post.appendChild(node)
-		  post.appendChild(textBody)
-		  document.getElementById("myList").appendChild(post);
+		  if(document.getElementById("textA").value.toString != undefined){
+		  	var post = document.createElement("DIV");
+			var node = document.createElement("DIV");
+			var textBody = document.createElement("DIV");
+			node.setAttribute("style", "background-color:#E2E2E2; border: 1px solid #F7F7F7; margin:5em; margin-bottom:0em !important;");
+			textBody.setAttribute("style", "background-color:#F2F2F2; border: 1px solid #F7F7F7; margin:5em;margin-top:0em !important;");
+			node.setAttribute("id", postID++)
+			var textnode = document.createTextNode("POST nº"+postID + ": \n");
+			var textBod = document.createTextNode(document.getElementById("textA").value);
+			node.appendChild(textnode);
+			textBody.appendChild(textBod);
+			post.appendChild(node)
+			post.appendChild(textBody)
+		  	document.getElementById("myList").appendChild(post);
+		  }
 		}
 	</script>
 
